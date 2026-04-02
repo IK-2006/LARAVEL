@@ -8,5 +8,5 @@ Route::get('/teste', function(){
     return view('teste');
 });
 
-Route::resource('curso', CursoController::class);
+Route::resource('cursos', CursoController::class);
 

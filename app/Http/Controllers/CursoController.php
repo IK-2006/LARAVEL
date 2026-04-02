@@ -27,7 +27,18 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dados = $request->validate([
+            'nome' => ['required', 'string', 'max:255'],
+            'descricao' => ['required', 'string'],
+        ]);
+
+        Curso::create($dados);
+        
+        #Curso = Model
+
+        return redirect()
+            ->route('cursos.index')
+            ->with('sucess', 'Curso criado com sucesso.');
     }
 
     /**
