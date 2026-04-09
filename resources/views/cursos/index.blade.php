@@ -5,9 +5,13 @@
 @section('content')
     <h1>Lista de Cursos</h1>
 
+
     <div class="actions">
         <a href="{{ route('cursos.create') }}" class="btn">Novo curso</a>
     </div>
+
+
+    
 
     @if ($cursos->isEmpty())
         <p>Nenhum curso cadastrado ainda.</p>
@@ -17,6 +21,7 @@
                 <tr>
                     <th>Nome</th>
                     <th>Descricao</th>
+                    <th>Semestre</th>
                     <th>Criado em</th>
                     <th>Acoes</th>
                 </tr>
@@ -26,6 +31,7 @@
                     <tr>
                         <td>{{ $curso->nome }}</td>
                         <td>{{ $curso->descricao }}</td>
+                        <td>{{$curso->semestres}}</td>
                         <td>{{ $curso->created_at->format('d/m/Y H:i') }}</td>
                         <td>
                             <a href="{{ route('cursos.edit', $curso) }}" class="btn btn-warning">Editar</a>

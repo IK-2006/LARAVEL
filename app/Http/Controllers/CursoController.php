@@ -26,6 +26,7 @@ class CursoController extends Controller
         $dados = $request->validate([
             'nome' => ['required', 'string', 'max:255'],
             'descricao' => ['required', 'string'],
+            'semestres' => ['required', 'integer', 'max:3'],
         ]);
 
         Curso::create($dados);
@@ -45,6 +46,7 @@ class CursoController extends Controller
         $dados = $request->validate([
             'nome' => ['required', 'string', 'max:255'],
             'descricao' => ['required', 'string'],
+            'semestres' => ['required', 'integer', 'max:3'],
         ]);
 
         $curso->update($dados);
