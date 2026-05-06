@@ -1,6 +1,6 @@
 @csrf
 
-<label for="nome">Nome do curso</label>
+<label for="nome">Nome do produto</label>
 <input
     type="text"
     id="nome"
