@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('cursos', function(Blueprint $table){
-            $table->unsignedTinyInteger('semestres')->default(1)->after('descricao');
-            
-    });
-}
+        Schema::create('categorias', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->string('nome');
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('categorias');
     }
 };
-
