@@ -1,15 +1,14 @@
 <?php
 
-use App\Http\Controllers\EstruturaController;
-use App\Http\Controllers\CursoController;
+use App\Http\Controllers\CategoriaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('estrutura.index');
+    return redirect()->route('produtos.index');
 });
 
-Route::resource('cursos', CursoController::class);
-Route::resource('alunos', AlunoController::class);
+Route::resource('produtos', CursoController::class);
+Route::resource('categoria', CategoriaController::class);
 Route::resource('estrutura', EstruturaController::class);
 
 

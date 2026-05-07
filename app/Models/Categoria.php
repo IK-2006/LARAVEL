@@ -4,13 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Curso extends Model
+class Categoria extends Model
 {
-
-    // fillable - Insere informacoes em massa
+// fillable - Insere informacoes em massa
     protected $fillable = [
         'nome',
-        'descricao',
-        'semestres',
     ];
 }
